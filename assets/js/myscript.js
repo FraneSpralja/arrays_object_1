@@ -148,7 +148,7 @@ const pacientesRadio = document.querySelector('.first_last-1');
 pacientesRadio.innerHTML = `Primera atención: ${radiologia[0].paciente} // ${radiologia[0].prevision} | Última atención: ${radiologia[4].paciente} // ${radiologia[4].prevision}`;
 
 const tableRadio = document.querySelector('.tabla-1');
-radiologia.forEach((reserva) =>{
+radiologia.forEach((reserva) => {
     tableRadio.innerHTML += `
     <tr>
     <td>${reserva.hora}</td>
@@ -163,22 +163,24 @@ const pacientesTrauma = document.querySelector('.first_last-2');
 pacientesTrauma.innerHTML = `Primera atención: ${traumatologia[0].paciente} // ${traumatologia[0].prevision} | Última atención ${traumatologia[6].paciente} // ${traumatologia[6].prevision}`;
 
 const tableTrauma = document.querySelector('.tabla-2');
-traumatologia.forEach((reserva) =>{
-    tableTrauma.innerHTML += `
+traumatologia.forEach((reserva) => {
+    tableTrauma.innerHTML += 
+    `
     <tr>
     <td>${reserva.hora}</td>
     <td>${reserva.especialista}</td>
     <td>${reserva.paciente}</td>
     <td>${reserva.rut}</td>
     <td>${reserva.prevision}</td>
-    </tr>`
+    </tr>
+    `
 });
 
 const pacientesDental = document.querySelector('.first_last-3');
 pacientesDental.innerHTML = `Primera atención: ${dental[0].paciente} // ${dental[0].prevision} | Última atención ${dental[5].paciente} // ${dental[5].prevision}`;
 
 const tableDental = document.querySelector('.tabla-3');
-dental.forEach((reserva) =>{
+dental.forEach((reserva) => {
     tableDental.innerHTML += `
     <tr>
     <td>${reserva.hora}</td>
@@ -188,36 +190,3 @@ dental.forEach((reserva) =>{
     <td>${reserva.prevision}</td>
     </tr>`
 });
-
-// let tabla = "<tr><th>Hora</th><th>Especialista</th><th>Paciente</th><th>RUT</th><th>Previsión</th></tr>";
-
-// pacientes.forEach(function(paciente){
-//     document.getElementById('cuerpo-tabla').innerHTML =
-//             `<tr>
-//             <td>${paciente.hora}</td>
-//             <td>${paciente.especialista}</td>
-//             <td>${paciente.paciente}</td>
-//             <td>${paciente.rut}</td>
-//             <td>${paciente.prevision}</td>
-//             </tr>`;
-// });
-
-// for(let i = 0; i < pacientes.length; i++){
-//     tabla += `<tr>
-//             <td>${pacientes[i].hora}</td>
-//             <td>${pacientes[i].especialista}</td>
-//             <td>${pacientes[i].paciente}</td>
-//             <td>${pacientes[i].rut}</td>
-//             <td>${pacientes[i].prevision}</td>
-//             </tr>`;
-// }
-
-// document.getElementById("cuerpo-tabla").innerHTML = `${tabla}`;
-
-// function first_last(){
-//     let first = pacientes[0].paciente;
-//     let last = pacientes[4].paciente;
-//     document.write(`<br><b>Primer paciente:</b> ${first} | <b>Último paciente:</b> ${last}`);
-// }
-
-// document.querySelector('.table__header').innerHTML = `${first_last()}`;
